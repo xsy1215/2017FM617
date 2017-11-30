@@ -14,33 +14,42 @@ def index():
 
 @app.route('/nyse')
 def nyse():
-    # TODO:"請填入合適的程式碼！"
-    return "Hello!!!"
+    df = pd.read_csv("nyse_companylist.csv", encoding="utf-8", header=0)
+    df.sort_index(ascending=True)
+    return df.to_html()
 
 @app.route('/nyse/<symbol>')
 def nyse_company(symbol):
-    # TODO:"請填入合適的程式碼！"
-    return "Hello!!!"
+    df = pd.read_csv("nyse_companylist.csv",encoding="utf-8", header=0)
+    df.sort_index(ascending=True)
+    match = df.loc[df['Symbol'] == symbol.upper()]
+    return match.to_html()
 
 @app.route('/nasdaq')
 def nasdaq():
-    # TODO:"請填入合適的程式碼！"
-    return "Hello!!!"
+    df = pd.read_csv("nasdaq_companylist.csv", encoding="utf-8", header=0)
+    df.sort_index(ascending=True)
+    return df.to_html()
 
 @app.route('/nasdaq/<symbol>')
 def nasdaq_company(symbol):
-    # TODO:"請填入合適的程式碼！"
-    return "Hello!!!"
+    df = pd.read_csv("nasdaq_companylist.csv",encoding="utf-8", header=0)
+    df.sort_index(ascending=True)
+    match = df.loc[df['Symbol'] == symbol.upper()]
+    return match.to_html()
 
 @app.route('/amex')
 def amex():
-    # TODO:"請填入合適的程式碼！"
-    return "Hello!!!"
+    df = pd.read_csv("amex_companylist.csv", encoding="utf-8", header=0)
+    df.sort_index(ascending=True)
+    return df.to_html()
 
 @app.route('/amex/<symbol>')
 def amex_company(symbol):
-    # TODO:"請填入合適的程式碼！"
-    return "Hello!!!"
+    df = pd.read_csv("amex_companylist.csv",encoding="utf-8", header=0)
+    df.sort_index(ascending=True)
+    match = df.loc[df['Symbol'] == symbol.upper()]
+    return match.to_html()
 
 
 if __name__=="__main__":
