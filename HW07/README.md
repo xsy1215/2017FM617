@@ -10,8 +10,6 @@ Drawdown
 -30.44%
 
 
-######################################################################
-
 
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type 
@@ -78,4 +76,3 @@ def rebalance(context, data):
     # Use the record() method to track up to five custom signals. 
     # Record Apple's current price and the average price over the last 
     # five days.
-
