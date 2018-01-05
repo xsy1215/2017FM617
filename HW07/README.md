@@ -19,9 +19,7 @@ def initialize(context):
     # Specify that we want the 'rebalance' method to run once a day
     schedule_function(rebalance, date_rule=date_rules.every_day())
 
-"""
-Rebalance function scheduled to run once per day (at market open).
-"""
+
 def rebalance(context, data):
     # To make market decisions, we're calculating the stock's 
     # moving average for the last 5 days.
