@@ -1,17 +1,16 @@
 ### Returns143.75%，Alpha 0.11，Beta1.06，Sharpe 1.10，Drawdown-30.44%
 
 """ 
+
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type 
-    # this line you'll see [the auto-complete popup after `sid(`.
+    
     context.security =[sid(5061),sid(24)]
 
     # Specify that we want the 'rebalance' method to run once a day
     schedule_function(rebalance, date_rule=date_rules.every_day())
 
-"""
-Rebalance function scheduled to run once per day (at market open).
-"""
+
 def rebalance(context, data):
     # To make market decisions, we're calculating the stock's 
     # moving average for the last 5 days.
