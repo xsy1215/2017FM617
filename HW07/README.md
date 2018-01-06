@@ -1,7 +1,7 @@
 ### Returns143.75%，Alpha 0.11，Beta1.06，Sharpe 1.10，Drawdown-30.44%
 
 """ 
-
+### 
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type 
     
