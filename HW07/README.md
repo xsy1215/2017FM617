@@ -3,13 +3,13 @@
 
 
 """
-
+#
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type 
    context.security =[sid(5061),sid(24)]
     # Specify that we want the 'rebalance' method to run once a day
     schedule_function(rebalance, date_rule=date_rules.every_day())
-
+#
 def rebalance(context, data):
     # To make market decisions, we're calculating the stock's 
     # moving average for the last 5 days.
