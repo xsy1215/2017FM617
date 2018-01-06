@@ -2,7 +2,7 @@
 ###### Returns143.75%，Alpha 0.11，Beta1.06，Sharpe 1.10，Drawdown-30.44% ####### 
 
 
-###
+"""
 
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type 
@@ -32,7 +32,7 @@ def rebalance(context, data):
     )
     # Then we take an average of those 5 days.
     average_price = price_history.mean()
-     # Then we take an trading volume.
+    # Then we take an trading volume.
     average_volume = volume_history.mean()
     # We also get the stock's current price. 
     current_price = data.current(stock, 'price') 
@@ -64,6 +64,5 @@ def rebalance(context, data):
     # Use the record() method to track up to five custom signals. 
     # Record Apple's current price and the average price over the last 
     # five days.
- ###
-
-  
+    
+"""
