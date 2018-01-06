@@ -1,11 +1,12 @@
 
-###### Returns143.75%，Alpha 0.11，Beta1.06，Sharpe 1.10，Drawdown-30.44%
+###### Returns143.75%，Alpha 0.11，Beta1.06，Sharpe 1.10，Drawdown-30.44% ####### 
 
-##
+
+###
+
 def initialize(context):
     # In our example, we're looking at Apple.  If you re-type 
    context.security =[sid(5061),sid(24)]
-
     # Specify that we want the 'rebalance' method to run once a day
     schedule_function(rebalance, date_rule=date_rules.every_day())
 
@@ -63,6 +64,6 @@ def rebalance(context, data):
     # Use the record() method to track up to five custom signals. 
     # Record Apple's current price and the average price over the last 
     # five days.
- ##
+ ###
 
   
